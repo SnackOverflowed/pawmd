@@ -1,0 +1,16 @@
+<html ng-app="pawmdApp">
+	<!-- This page uses AngularJS -->
+	<head>
+	    <title>PawMD App</title>
+	    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+	    <script src="/js/search-control.js"></script>
+	</head>
+
+	<body ng-controller="SearchPageCtrl">
+	    <div>
+	    	<h2>This is a list of breed names</h2>
+	    	<p ng-repeat="breed in breedList">{{breed.breedName}}</p>
+	    </div>
+	</body>
+
+</html>
