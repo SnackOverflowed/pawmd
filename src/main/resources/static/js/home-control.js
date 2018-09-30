@@ -11,10 +11,7 @@ pawmdApp.controller('HomePageCtrl', function ($scope, $http, $window) {
   }
 
   $scope.breedSearch = function() {
-	  //$http.get("/search")  
-	  //	.success(function(data){
 	  	$window.location.href = '../search.html';
-	  //	});
   }
 
 });

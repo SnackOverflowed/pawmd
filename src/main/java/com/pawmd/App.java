@@ -7,6 +7,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 
 import com.pawmd.dataprovider.BreedListProvider;
+import com.pawmd.dataprovider.ImageURLProvider;
 
 
 @Configuration
@@ -21,6 +22,11 @@ public class App
 		return breedListProvider;
 	}
 	
+	@Bean
+	public ImageURLProvider imageURLProvider() {
+		ImageURLProvider imageURLProvider = new ImageURLProvider();
+		return imageURLProvider;
+	}
 	
     public static void main( String[] args )
     {
