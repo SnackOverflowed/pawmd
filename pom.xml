@@ -39,6 +39,11 @@
 	    <groupId>com.googlecode.json-simple</groupId>
 	    <artifactId>json-simple</artifactId>
 	</dependency>
+	  
+	<dependency>
+	    <groupId>com.googlecode.apache-commons-configuration</groupId>
+	    <artifactId>apache-commons-configuartion</artifactId>
+	</dependency>
 	
 	<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 	<dependency>
