@@ -26,7 +26,7 @@ public class WebController {
 		BreedInfo b = new BreedInfo();
 		b.setBreedName("breed name: " + breedName);
 		b.setFoodType("food type: orange chicken");
-		b.setWalkTime("walk time: 23 hours a day");
+		b.setWalkTime("walk time: 25 hours a day");
 		return b;
 	}
 	
