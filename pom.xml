@@ -39,6 +39,12 @@
 	    <groupId>com.googlecode.json-simple</groupId>
 	    <artifactId>json-simple</artifactId>
 	</dependency>
+	
+	<dependency>
+		<groupId>org.antlr</groupId>
+		<artifactId>antlr4</artifactId>
+		<version>4.7.1</version>
+	</dependency>
 
 	
   </dependencies>
