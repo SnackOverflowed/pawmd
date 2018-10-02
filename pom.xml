@@ -39,13 +39,26 @@
 	    <groupId>com.googlecode.json-simple</groupId>
 	    <artifactId>json-simple</artifactId>
 	</dependency>
+<<<<<<< HEAD
 	
 	<dependency>
 		<groupId>org.antlr</groupId>
 		<artifactId>antlr4</artifactId>
 		<version>4.7.1</version>
+  
+	<dependency>
+ 		 <!-- jsoup HTML parser library @ https://jsoup.org/ -->
+  		<groupId>org.jsoup</groupId>
+  		<artifactId>jsoup</artifactId>
+  		<version>1.11.3</version>
+>>>>>>> 54799804037cdbb00bf6e29a6237e0e55ba94d1b
 	</dependency>
 
+	<dependency>
+		<groupId>org.antlr</groupId>
+		<artifactId>antlr4</artifactId>
+		<version>4.7.1</version>
+	</dependency>
 	
   </dependencies>
 </project>
