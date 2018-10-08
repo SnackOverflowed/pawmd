@@ -4,21 +4,25 @@ import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.springframework.web.client.RestTemplate;
 
-public class ImageURLProvider {
+import com.pawmd.data.BreedNameAndURL;
 
-	private String URL;
+public class ImageURLProvider {
 	
-	public String getBreedImageURL(String breedName) {
+	public BreedNameAndURL getBreedImageURL(String breedName) {
 		String[] words = breedName.split("\\s+");
 		if (words.length > 1) {
 			breedName = words[1] + "-" + words[0];
 		}
 		String APIcall = "https://dog.ceo/api/breed/" + breedName + "/images/random";
 		
-		return parseJsonForURL(APIcall);
+		BreedNameAndURL result = new BreedNameAndURL();
+		result.setName("Image of " + breedName);
+		result.setImageURL(parseJsonForURL(APIcall));
+		return result;
 	}
 	
 	private String parseJsonForURL(String APIcall) {
+		String URL = "";
 		RestTemplate restTemplate = new RestTemplate();
 		String JSONresult = restTemplate.getForObject(APIcall, String.class);
 		

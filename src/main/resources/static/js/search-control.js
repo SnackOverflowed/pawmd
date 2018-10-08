@@ -11,11 +11,10 @@ pawmdApp.controller('SearchPageCtrl', function ($scope, $http, $window) {
 	}
 
 	$scope.hoverIn = function(breed_name){
-	    console.log(breed_name);
+	    
 	    $http.get("/breedImageURL/" + breed_name)
 	  		.success(function(data){
-		  		$scope.breedImageURL = data;
-		  		$scope.breedName = breed_name;
+		  		$scope.breedNameAndURL = data;
 	  	});
 	};
 

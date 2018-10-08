@@ -8,6 +8,7 @@ import org.springframework.context.annotation.Configuration;
 
 import com.pawmd.dataprovider.BreedListProvider;
 import com.pawmd.dataprovider.ImageURLProvider;
+import com.pawmd.dataprovider.MongoDataProvider;
 
 
 @Configuration
@@ -26,6 +27,12 @@ public class App
 	public ImageURLProvider imageURLProvider() {
 		ImageURLProvider imageURLProvider = new ImageURLProvider();
 		return imageURLProvider;
+	}
+	
+	@Bean
+	public MongoDataProvider mongoDataProvider() {
+		MongoDataProvider mongoDataProvider = new MongoDataProvider();
+		return mongoDataProvider;
 	}
 	
     public static void main( String[] args )

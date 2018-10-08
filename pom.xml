@@ -39,12 +39,7 @@
 	    <groupId>com.googlecode.json-simple</groupId>
 	    <artifactId>json-simple</artifactId>
 	</dependency>
-	  
-	<dependency>
-	    <groupId>com.googlecode.apache-commons-configuration</groupId>
-	    <artifactId>apache-commons-configuartion</artifactId>
-	</dependency>
-	
+
 	<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
 	<dependency>
 	    <groupId>mysql</groupId>
@@ -52,29 +47,45 @@
 	</dependency>
 	
 	<dependency>
-		<groupId>org.antlr</groupId>
-		<artifactId>antlr4</artifactId>
-		<version>4.7.1</version>
-  
-	<dependency>
- 		 <!-- jsoup HTML parser library @ https://jsoup.org/ -->
+		<!-- jsoup HTML parser library @ https://jsoup.org/ -->
   		<groupId>org.jsoup</groupId>
   		<artifactId>jsoup</artifactId>
   		<version>1.11.3</version>
-
 	</dependency>
+	
 
+	
 	<dependency>
 		<groupId>org.antlr</groupId>
 		<artifactId>antlr4</artifactId>
 		<version>4.7.1</version>
+  	</dependency>
+	
+	<dependency>
+        <groupId>org.mongodb</groupId>
+        <artifactId>mongodb-driver-sync</artifactId>
+        <version>3.8.2</version>
+    </dependency>
+    
+    <dependency>
+	    <groupId>org.springframework.data</groupId>
+	    <artifactId>spring-data-mongodb</artifactId>
 	</dependency>
 
-	<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+	<!--
 	<dependency>
-	    <groupId>mysql</groupId>
-	    <artifactId>mysql-connector-java</artifactId>
-	</dependency>	
+		<groupId>org.antlr</groupId>
+		<artifactId>antlr4</artifactId>
+		<version>4.7.1</version>
+  	</dependency>
+	
+	<dependency>
+	    <groupId>com.googlecode.apache-commons-configuration</groupId>
+	    <artifactId>apache-commons-configuartion</artifactId>
+	    <version>1.6</version>
+	</dependency>
+	
+	-->
   
  </dependencies>
 </project>
