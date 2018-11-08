@@ -12,11 +12,11 @@
 /* Control the left side */
 .left {
   left: 0;
-  background-color: blue;
+  background-color: C5E4FC;
 }
 
 /* Control the right side */
 .right {
   right: 0;
-  background-color: red;
+  background-color: DCC5FC;
 }
