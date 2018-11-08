@@ -1,13 +1,28 @@
 <html ng-app="pawmdApp">
 	<!-- This page uses AngularJS -->
 	<head>
-	    <title>PawMD App</title>
+		 <meta charset="utf-8">
+	    <title>PawMD</title>
 	    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
 	    <script src="/js/home-control.js"></script>
-	</head>
-
-	<body ng-controller="HomePageCtrl">
-	    <div class="container">
+        <link rel ="stylesheet" href ="style.css">
+    </head>
+    
+    <body ng-controller="HomePageCtrl">
+        <h1> Paw-MD </h1>  
+        <nav>
+            <ul>
+				<li> <a href = "#Home" > Home </a> </li>
+                <li> <a href = "#Search" > Search </a> </li>
+				<li> <a href = "#Breeds" > Bree </a> </li>
+            </ul>
+        </nav>
+        
+        <figure id = "mainPic">
+            <img src = "real-dog-clipart-1.jpg" width = "40" height ="50">
+        </figure>
+        
+	    <div class="stuff">
 	        <form>
 	          <input ng-model="breed_name" type="text" placeholder="Enter a Breed Name" required>
 	          <button ng-click="getBreedInfo()">Get Breed Info</button>
@@ -17,7 +32,6 @@
 	          <button ng-click="breedSearch()">Search a breed</button>
 	        </form>
     	</div>
-
     	<div>
     		<label>{{breedInfo.breedName}}</label><br>
     		<label>{{breedInfo.foodType}}</label><br>
