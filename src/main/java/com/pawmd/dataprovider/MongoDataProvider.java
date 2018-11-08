@@ -29,7 +29,7 @@ public class MongoDataProvider {
 		
 		MongoCollection<Document> collection = database.getCollection("breed");
 
-		Document myDoc = collection.find(eq("breed-name", breedName)).first();
+		Document myDoc = collection.find(eq("breed-name", getCorrectNameFormat(breedName))).first();
 		mongoClient.close();
 		
 		BreedInfo b = new BreedInfo();
@@ -38,11 +38,36 @@ public class MongoDataProvider {
 			b.setBreedName(breedName + " could not be found in our database");
 		}
 		else {
-			b.setBreedName("breed name: " + myDoc.getString("breed-name"));
-			b.setFoodType("food type: " + myDoc.getString("food-type"));
-			b.setWalkTime("walk time: " + myDoc.getString("walk-time"));
+			b.setBreedName("Breed name: " + myDoc.getString("breed-name"));
+			b.setFoodType("Food type: " + myDoc.getString("food-type"));
+			b.setWalkTime("Walk time: " + myDoc.getString("walk-tips"));
+			b.setBreedSize("Breed size: " + myDoc.getString("size"));
+			b.setFeeding("Feeding frequency: " + myDoc.getString("feeding-frequency"));
+			b.setGromming("Groming: " + myDoc.getString("groming"));
+			b.setHealth("Health concern: " + myDoc.getString("health-concerns"));
+			b.setLifespan("Life span: " + myDoc.getString("average-lifespan"));
 		}
 
 		return b;
 	}
+	
+	private String getCorrectNameFormat(String name) {
+		char ch[] = name.toCharArray(); 
+        for (int i = 0; i < name.length(); i++) { 
+
+            if (i == 0 && ch[i] != ' ' ||  ch[i] != ' ' && ch[i - 1] == ' ') { 
+                if (ch[i] >= 'a' && ch[i] <= 'z') { 
+                    ch[i] = (char)(ch[i] - 'a' + 'A'); 
+                } 
+            } 
+            else if (ch[i] >= 'A' && ch[i] <= 'Z')  
+                ch[i] = (char)(ch[i] + 'a' - 'A');             
+        } 
+  
+        String st = new String(ch); 
+        return st; 
+	}
+
+	
+
 }

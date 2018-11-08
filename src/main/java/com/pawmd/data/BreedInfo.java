@@ -11,8 +11,43 @@ public class BreedInfo {
 	private String breedName;
 	private String foodType;
 	private String walkTime;
+	private String feeding;
+	private String health;
+	private String lifespan;
+	private String gromming; 
+	private String breedSize;
 
 	
+	public String getFeeding() {
+		return feeding;
+	}
+	public void setFeeding(String feeding) {
+		this.feeding = feeding;
+	}
+	public String getHealth() {
+		return health;
+	}
+	public void setHealth(String health) {
+		this.health = health;
+	}
+	public String getLifespan() {
+		return lifespan;
+	}
+	public void setLifespan(String lifespan) {
+		this.lifespan = lifespan;
+	}
+	public String getGromming() {
+		return gromming;
+	}
+	public void setGromming(String gromming) {
+		this.gromming = gromming;
+	}
+	public String getBreedSize() {
+		return breedSize;
+	}
+	public void setBreedSize(String breedSize) {
+		this.breedSize = breedSize;
+	}
 	public ObjectId get_id() {
 		return _id;
 	}
