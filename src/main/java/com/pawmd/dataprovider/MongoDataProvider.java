@@ -41,7 +41,8 @@ public class MongoDataProvider {
 			b.setBreedName("Breed name: " + myDoc.getString("breed-name"));
 			b.setFoodType("Food type: " + myDoc.getString("food-type"));
 			b.setWalkTime("Walk time: " + myDoc.getString("walk-tips"));
-			b.setBreedSize("Breed size: " + myDoc.getString("size"));
+			b.setFemaleWeight("Female weight: " + myDoc.getString("female-weight"));
+			b.setMaleWeight("Male weight: " + myDoc.getString("male-weight"));
 			b.setFeeding("Feeding frequency: " + myDoc.getString("feeding-frequency"));
 			b.setGromming("Groming: " + myDoc.getString("groming"));
 			b.setHealth("Health concern: " + myDoc.getString("health-concerns"));
