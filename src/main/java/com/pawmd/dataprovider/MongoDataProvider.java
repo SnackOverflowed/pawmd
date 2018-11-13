@@ -44,7 +44,7 @@ public class MongoDataProvider {
 			b.setFemaleWeight("Female weight: " + myDoc.getString("female-weight"));
 			b.setMaleWeight("Male weight: " + myDoc.getString("male-weight"));
 			b.setFeeding("Feeding frequency: " + myDoc.getString("feeding-frequency"));
-			b.setGromming("Groming: " + myDoc.getString("groming"));
+			b.setGrooming("Grooming: " + myDoc.getString("grooming"));
 			b.setHealth("Health concern: " + myDoc.getString("health-concerns"));
 			b.setLifespan("Life span: " + myDoc.getString("average-lifespan"));
 		}
