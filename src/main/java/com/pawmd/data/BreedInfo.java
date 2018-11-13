@@ -39,7 +39,7 @@ public class BreedInfo {
 	public String getGrooming() {
 		return grooming;
 	}
-	public void setGromming(String grooming) {
+	public void setGrooming(String grooming) {
 		this.grooming = grooming;
 	}
 	public ObjectId get_id() {
