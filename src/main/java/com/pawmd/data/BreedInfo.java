@@ -14,7 +14,7 @@ public class BreedInfo {
 	private String feeding;
 	private String health;
 	private String lifespan;
-	private String gromming; 
+	private String grooming; 
 	private String femaleWeight;
 	private String maleWeight;
 	
@@ -36,11 +36,11 @@ public class BreedInfo {
 	public void setLifespan(String lifespan) {
 		this.lifespan = lifespan;
 	}
-	public String getGromming() {
-		return gromming;
+	public String getGrooming() {
+		return grooming;
 	}
-	public void setGromming(String gromming) {
-		this.gromming = gromming;
+	public void setGromming(String grooming) {
+		this.grooming = grooming;
 	}
 	public ObjectId get_id() {
 		return _id;
