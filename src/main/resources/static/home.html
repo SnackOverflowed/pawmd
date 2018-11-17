@@ -72,22 +72,30 @@
         </div>
       </div>
     </section> 
-    <!--
-    <p id="Maps" ></p>
+    
+    </p>
     <section class="probootstrap-section" data-section="NearestPetStores">
       <div class="container">
         <div class="row text-center mb30">
           <div class="col-md-8 col-md-offset-2 probootstrap-section-heading">
+            <p id="Maps" >
             <h2 class="mb30 text-black probootstrap-heading">Nearest Pet Stores</h2>
-            <p> 
+            
               Enter Location: 
                 <input type ="text" id ="userLocation" name="place">
                 <button onclick="displayMap()">Search</button> 
-            </p>
+          
               <p id="display"></p>
           </div>
         </div>
       </div>
-    -->
+    <script>
+    	function displayMap()
+    	{
+    		var places=document.getElementById("userLocation").value;
+    		var maps= "<iframe width=\"740\" height=\"500\" src= \"https://maps.google.com/maps?q=" + places + "&t=&z=13&ie=UTF8&iwloc=&output=embed\"></iframe>";
+    		document.getElementById("display").innerHTML=maps;
+    	}
+    </script>
     </body> 
 </html>
