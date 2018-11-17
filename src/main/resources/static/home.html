@@ -1,48 +1,93 @@
 <html ng-app="pawmdApp">
-	<!-- This page uses AngularJS -->
-	<head>
-		 <meta charset="utf-8">
-	    <title>PawMD</title>
-	    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
-	    <script src="/js/home-control.js"></script>
-        <link rel ="stylesheet" href ="style.css">
-    </head>
+  <!-- This page uses AngularJS -->
+  <head>
+    <meta charset="utf-8">
+    <title>Paw-MD</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0EH8PZc2UblLuk9vKzJraXrtvkCOJglY&callback=displayMap">
+    </script>
+    <script src="./js/home-control.js"></script>
+    <link rel ="stylesheet" href ="css/home-style.css"/>
+  </head>
+  
+  <body ng-controller="HomePageCtrl">
+      <nav class="navbar navbar-default probootstrap-navbar">
+        <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="home.html">PAW-MD</a>
+        </div>
+        <div id="navbar-collapse" class="navbar-collapse collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li class="active"><a href="#Maps" data-nav-section="Nearest Pet Stores">Nearest Pet Stores</a></li>
+            <li><a href="#" data-nav-section="Food Recormendation">Food Recormendation</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav> 
     
-    <body ng-controller="HomePageCtrl">
-        <h1> Paw-MD </h1>  
-        <nav>
-            <ul>
-				<li> <a href = "#Home" > Home </a> </li>
-                <li> <a href = "#Search" > Search </a> </li>
-				<li> <a href = "#Breeds" > Bree </a> </li>
-            </ul>
-        </nav>
-        
-        <figure id = "mainPic">
-            <img src = "real-dog-clipart-1.jpg" width = "40" height ="50">
-        </figure>
-        
-	    <div class="stuff">
-	        <form>
-	          <input ng-model="breed_name" type="text" placeholder="Enter a Breed Name" required>
-	          <button ng-click="getBreedInfo()">Get Breed Info</button>
-	        </form>
-
-	        <form>
-	          <button ng-click="breedSearch()">Search a breed</button>
-	        </form>
-    	</div>
-    	<div>
-    		<p>{{breedInfo.breedName}}</p>
-    		<p>{{breedInfo.foodType}}</p>
-    		<p>{{breedInfo.walkTime}}</p>
-            <p>{{breedInfo.feeding}}</p>
-            <p>{{breedInfo.health}}</p>
-            <p>{{breedInfo.lifespan}}</p>
-            <p>{{breedInfo.groming}}</p>
-            <p>{{breedInfo.femaleWeight}}</p>
-            <p>{{breedInfo.maleWeight}}</p>
-    	</div>
-	</body>
-
+    <section class="probootstrap-hero prohttp://localhost/probootstrap/frame/#featuresbootstrap-slant" style="background-image: url(images/gt.jpg); max-height: 100%;" data-section="home" data-stellar-background-ratio="0.5">
+      <div class="container">
+        <div class="row intro-text">
+          <div class="col-md-8 col-sm-offset-2 text-center">
+            <h1 class="probootstrap-heading probootstrap-animate"></h1>
+            <p> say something here</p>
+            <br><br><br><br><br><br> 
+            <a href="#searchInfo" class="btn btn-success" role="button">Search Breed Info</a>
+            <button class="btn btn-success" ng-click="breedSearch()">List of Breed Name</button>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    <section class="probootstrap-section" data-section="demo">
+      <div class="container">
+        <div class="col-md-8 col-md-offset-2 probootstrap-section-heading row text-center"> 
+          <p id="searchInfo"></p>
+          <h2 class="mb15 text-black probootstrap-heading" >Search Breed Info</h2>
+        </div>
+        <div class="col-md-8 col-md-offset-2 probootstrap-section-heading row text-center"> 
+            <form>
+	      <input ng-model="breed_name" type="text" placeholder="Enter a Breed Name" required>
+	      <button ng-click="getBreedInfo()">Get Breed Info</button>
+	    </form>
+          
+            <div id="resultInformation">
+              <p>{{breedInfo.breedName}}</p>
+              <p>{{breedInfo.foodType}}</p>
+              <p>{{breedInfo.walkTime}}</p>
+              <p>{{breedInfo.feeding}}</p>
+              <p>{{breedInfo.health}}</p>
+              <p>{{breedInfo.lifespan}}</p>
+              <p>{{breedInfo.groming}}</p>
+              <p>{{breedInfo.femaleWeight}}</p>
+              <p>{{breedInfo.maleWeight}}</p>
+            </div>
+            
+        </div>
+      </div>
+    </section> 
+    <!--
+    <p id="Maps" ></p>
+    <section class="probootstrap-section" data-section="NearestPetStores">
+      <div class="container">
+        <div class="row text-center mb30">
+          <div class="col-md-8 col-md-offset-2 probootstrap-section-heading">
+            <h2 class="mb30 text-black probootstrap-heading">Nearest Pet Stores</h2>
+            <p> 
+              Enter Location: 
+                <input type ="text" id ="userLocation" name="place">
+                <button onclick="displayMap()">Search</button> 
+            </p>
+              <p id="display"></p>
+          </div>
+        </div>
+      </div>
+    -->
+    </body> 
 </html>
