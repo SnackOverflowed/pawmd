@@ -10,13 +10,15 @@ pawmdApp.controller('SearchPageCtrl', function ($scope, $http, $window) {
 	  	});
 	}
 
-	$scope.hoverIn = function(breed_name){
+	$scope.clickIn = function(breed_name){
 	    
 	    $http.get("/breedImageURL/" + breed_name)
 	  		.success(function(data){
 		  		$scope.breedNameAndURL = data;
 	  	});
 	};
-
-  	$scope.loadBreedList();
+	
+	
+	$scope.loadBreedList();
+	
 });
