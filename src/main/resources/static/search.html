@@ -1,25 +1,34 @@
 <html ng-app="pawmdApp">
-  <!-- This page uses AngularJS -->
-  <head>
-    <title>PawMD App</title>
-    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
-    <script src="/js/search-control.js"></script>
-    <link rel="stylesheet" type="text/css" href="/css/search-style.css"/>
-  </head>
-  <body ng-controller="SearchPageCtrl">
-    <section>
-      <h2>This is a list of breed names</h2>
-    </section>		
-    <section>
-      <div class="split left">	
-        <ol>
-          <li ng-repeat="breed in breedList" ng-mouseover="hoverIn(breed.breedName)">{{breed.breedName}}</li>
-        </ol>    		
-      </div>
-      <div class="split right">
-        <p>{{breedNameAndURL.name}}</p><br>
-        <img src="{{breedNameAndURL.imageURL}}"></img>
-      </div>
-    </section>	    
-  </body>
-</html>
+	<!-- This page uses AngularJS -->
+	<head>
+	    <title>Paw-MD_Search</title>
+	    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+	    <script src="/js/search-control.js"></script>
+	    <link rel="stylesheet" type="text/css" href="/css/search-style.css"/>
+	</head>
+
+	<body ng-controller="SearchPageCtrl">
+		<section><h3 id="heading1">  Please click a breed name to display a picture and to select as option </h2></section>
+		<section><h5 id="heading2">Continually click the breed name to display a new picture.</h4></section>		
+        <!-- search bar -->
+		
+          <section>
+            <div class="split left">
+              <ol>
+                <input type="text" id="breedInput" onkeyup="searchDogsList()" placeholder="Enter or pick from breed list...">
+                <ul id="myUL">
+                  <li ng-repeat="breed in breedList" ng-click="clickIn(breed.breedName)" ng-model ="(breed.breedName)" id = "testing"><a href="#">{{breed.breedName}}</a>
+                  </li>
+                </ul> 
+              </ol>
+            <div class="split right">
+              <p>{{breed.breedName}}</p><br>
+              <img id = "dogPicture" src = "{{breedNameAndURL.imageURL}}"></img>
+              <a href="home.html#searchInfo" id = "homepage">
+              <button id= "findBreedInfo" ng-click="homepage" ng-model="">Get more information about breed</button></a>
+            </section>
+	
+            
+  
+	</body>
+	
