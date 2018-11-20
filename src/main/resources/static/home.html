@@ -50,7 +50,7 @@
         <div class="row intro-text">
           <div class="col-md-8 col-sm-offset-2 text-center">
             <h1 class="probootstrap-heading probootstrap-animate"></h1>
-            <p> say something here</p>
+            <p> {{Message}}</p>
             <a href="#searchInfo" class="btn btn-success" role="button">Search Breed Info</a>
             <button class="btn btn-success" ng-click="breedSearch()">List of Breed Name</button>
           </div>
@@ -89,8 +89,11 @@
           <div class="col-md-8 col-md-offset-2 probootstrap-section-heading"> 
             <p id = "Maps"></p>
             <h2 class="mb30 text-black probootstrap-heading">Nearest Pet Stores</h2>
-            <form> Enter Location: <input type ="text" id ="userLocation" name="place"></form>
-            <button onclick="inputLocation()">Search</button>
+            <button onclick="inputLocation()" style="float: right">Search</button>
+            <div style="overflow: hidden;">
+                <form> Enter Location: <input style="width: 70%;" type ="text" id ="userLocation" name="place"></form>
+            </div>
+            
             <p id="map"></p>
           </div>
         </div>
