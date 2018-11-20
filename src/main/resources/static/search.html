@@ -1,29 +1,25 @@
 <html ng-app="pawmdApp">
-	<!-- This page uses AngularJS -->
-	<head>
-	    <title>PawMD App</title>
-	    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
-	    <script src="/js/search-control.js"></script>
-	    <link rel="stylesheet" type="text/css" href="/css/search-style.css"/>
-	</head>
-
-	<body ng-controller="SearchPageCtrl">
-		<section><h2>This is a list of breed names</h2></section>
-		
-		<section>
-			<div class="split left">	
-				<ol>
-					<li ng-repeat="breed in breedList" ng-mouseover="hoverIn(breed.breedName)">{{breed.breedName}}</li>
-				</ol>
-	    		
-		    </div>
-
-		    <div class="split right">
-		    	<p>{{breedNameAndURL.name}}</p><br>
-		    	<img src="{{breedNameAndURL.imageURL}}"></img>
-		    </div>
-		</section>
-	    
-	</body>
-
+  <!-- This page uses AngularJS -->
+  <head>
+    <title>PawMD App</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script src="/js/search-control.js"></script>
+    <link rel="stylesheet" type="text/css" href="/css/search-style.css"/>
+  </head>
+  <body ng-controller="SearchPageCtrl">
+    <section>
+      <h2>This is a list of breed names</h2>
+    </section>		
+    <section>
+      <div class="split left">	
+        <ol>
+          <li ng-repeat="breed in breedList" ng-mouseover="hoverIn(breed.breedName)">{{breed.breedName}}</li>
+        </ol>    		
+      </div>
+      <div class="split right">
+        <p>{{breedNameAndURL.name}}</p><br>
+        <img src="{{breedNameAndURL.imageURL}}"></img>
+      </div>
+    </section>	    
+  </body>
 </html>
