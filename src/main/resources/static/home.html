@@ -38,7 +38,8 @@
         <div id="navbar-collapse" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <li class="active"><a href="#Maps" data-nav-section="Nearest Pet Stores">Nearest Pet Stores</a></li>
-            <li><a href="#foodRecommendation" data-nav-section="Food Recormendation">Food Recommendation</a></li>
+            <li><a href="#foodRecommendation" data-nav-section="Food Recommendations">Food Recommendations</a></li>
+            <li><a href="#groomRecommendation" data-nav-section="Groom Recommendations">Grooming Recommendations</a></li>
           </ul>
         </div>
       </div>
@@ -399,43 +400,43 @@
           if(userLocation==="diamond bar"){westcovina();}
         }
         var locations = [
-          {lat: 34.000810, lng: -117.724040}, // chino PC Address: 3820 Grand Ave, Chino, CA 91710, Phone: (909) 364-9807
-          {lat: 34.068740, lng: -117.935380}, //Westcovina Petco Animal Supplies Address: 1050 W Covina Pkwy, West Covina, CA 91790 Phone: (626) 813-9040
-          {lat: 34.107600, lng: -117.731260}, // clairmont PC Address: 905 W Foothill Blvd, Claremont, CA 91711. Phone: (909) 399-9101
-          {lat: 34.114760, lng: -117.769660},// La Verne PC Address: 1572 Foothill Blvd, La Verne, CA 91750, Phone: (909) 450-2190
+          {lat: 34.000810, lng: -117.724040 ,info: "<h3>Chino PetCo</h3><p>Address:3820 Grand Ave, Chino, CA 91710</p><p> Phone: (909) 364-9807</p>" },
+          {lat: 34.068740, lng: -117.935380,info: "<h3>Westcovina Petco Animal Supplies</h3><p>Address: 1050 W Covina Pkwy, West Covina, CA 91790</p><p> Phone: (626) 813-9040</p>"},
+          {lat: 34.107600, lng: -117.731260,info: "<h3>clairmont PetCo</h3><p> Address: 905 W Foothill Blvd, Claremont, CA 91711.</p><p> Phone: (909) 399-9101</p>" },
+          {lat: 34.114760, lng: -117.769660,info: "<h3>La Verne PetCo</h3><p> Address: 1572 Foothill Blvd, La Verne, CA 91750,</p><p> Phone: (909) 450-2190</p>" },
 
 
-          {lat: 34.017330, lng: -117.686210}, // chino PS Address: 11945 Central Ave, Chino, CA 91710, Phone: (909) 628-6665
-          {lat: 34.016320, lng: -117.745790}, // chinoHill PS Address: 13001 Peyton Dr, Chino Hills, CA 91709 Phone: (909) 627-4849
-          {lat: 34.028770, lng: -117.831770}, // City of indutry Address: 21848 Valley Blvd, City of Industry, CA 91789,Phone: (909) 594-5043
-          {lat: 34.073160, lng: -117.883000}, //West Covina Address: 2851 E Eastland Center Dr Fsu9, West Covina, CA 91791, Phone: (626) 331-2753
-          {lat: 34.034360, lng: -117.913130}, // West Covina Address: 2350 S Azusa Ave, West Covina, CA 91792, Phone: (626) 964-8013
+          {lat: 34.017330, lng: -117.686210,info: "<h3>Chino PetSmart</h3><p> Address: 11945 Central Ave, Chino, CA 91710,</p><p> Phone: (909) 628-6665</p>" },
+          {lat: 34.016320, lng: -117.745790,info: "<h3>ChinoHill PetSmart</h3><p> Address: 13001 Peyton Dr, Chino Hills, CA 91709</p><p> Phone: (909) 627-4849</p>" },
+          {lat: 34.028770, lng: -117.831770,info: "<h3>City of indutry PetSmart</h3><p> Address: 21848 Valley Blvd, City of Industry, CA 91789</p><p>Phone: (909) 594-5043</p>" },
+          {lat: 34.073160, lng: -117.883000,info: "<h3>West Covina PetSmart</h3><p> Address: 2851 E Eastland Center Dr Fsu9, West Covina, CA 91791,</p><p> Phone: (626) 331-2753</p>" },
+          {lat: 34.034360, lng: -117.913130,info: "<h3>West Covina PetSmart </h3><p> Address: 2350 S Azusa Ave, West Covina, CA 91792,</p><p> Phone: (626) 964-8013</p>" },
 
-          {lat: 34.028380, lng: -117.758360}, //WalMart Pomona Address: 80 Rio Rancho Rd, Pomona, CA 91766 Phone: (909) 620-4602
-          {lat: 34.073380, lng: -117.887280}, // Westcovina 2753 E Eastland Center Dr #5555, West Covina, CA 91791,Phone: (626) 332-4608
-          {lat: 34.103590, lng: -117.909400}, // W Covina Address: 1275 N Azusa Ave, Covina, CA 91722, Phone: (626) 339-4161
-          {lat: 33.995350, lng: -117.719390}, //W chino Address: 3943 Grand Ave, Chino, CA 91710 Phone: (909) 364-1968
+          {lat: 34.028380, lng: -117.758360,info: "<h3>WalMart Pomona</h3><p> Address: 80 Rio Rancho Rd, Pomona, CA 91766</p><p> Phone: (909) 620-4602</p>" },
+          {lat: 34.073380, lng: -117.887280,info: "<h3>West Covina WalMart</h3><p> 2753 E Eastland Center Dr #5555, West Covina, CA 91791,</p><p>Phone: (626) 332-4608</p>" },
+          {lat: 34.103590, lng: -117.909400,info: "<h3>West Covina WalMart</h3><p> Address: 1275 N Azusa Ave, Covina, CA 91722,</p><p> Phone: (626) 339-4161</p>" },
+          {lat: 33.995350, lng: -117.719390,info: "<h3>Chino WalMart</h3><p> Address: 3943 Grand Ave, Chino, CA 91710</p><p> Phone: (909) 364-1968</p>" },
 
-          {lat: 34.041820, lng: -117.799240},// CHino All Pets Medical & Surgical Center Address: 3070 W Temple Ave, Phillips Ranch, CA 91766 Phone: (909) 622-1044
+          {lat: 34.041820, lng: -117.799240,info: "<h3>CHino All Pets Medical & Surgical Center</h3><p> Address: 3070 W Temple Ave, Phillips Ranch, CA 91766</p><p> Phone: (909) 622-1044</p>" },
 
-          {lat: 34.062010, lng: -117.776030},//Pomona Lucky Pets Grooming Salon Address: 1565 W Holt Ave #2, Pomona, CA 91768
-          {lat: 33.988290, lng: -117.822570}, // diamond Happy Doggie Spa Address: 365 S Diamond Bar Blvd, Diamond Bar, CA 91765, Phone: (909) 396-4500
-          {lat: 34.106670, lng: -117.800670}, // San Dimas Address: 143 E Bonita Ave, San Dimas, CA 91773 Phone: (909) 599-3383
-          {lat: 34.088330, lng: -117.855490}, // Covina Pet Spaw and Grooming Covina Address: 2900, 984 E Badillo St # A, Covina, CA 91724,Phone: (626) 331-4348 
-          {lat: 34.066940, lng: -117.751180}, //Lorrie's Pet Grooming Address: 928 N Garey Ave, Pomona, CA 91767 Phone: (909) 865-8891
-          {lat: 34.080740, lng: -117.756870}, // Lili's Pet Grooming Address: 105 W Willow St, Pomona, CA 91768,Phone: (909) 622-3272
-          {lat: 34.113370, lng: -117.765070},//Pet Bath USA Address: 2117 Foothill Blvd h, La Verne, CA 91750, Phone: (909) 593-8602
-          {lat: 34.008630, lng: -117.689680}, // Chino Mutt Cutts Dog Spa Address: 13460 Central Ave unit G, Chino, CA 91710 Phone: (909) 902-9898
-          {lat: 34.031490, lng: -117.667670} // Pet Bath USA Address: 12345 Mountain Ave # S, Chino, CA 91710 Phone: (909) 627-6662
+          {lat: 34.062010, lng: -117.776030,info: "<h3>Pomona Lucky Pets Grooming Salon</h3><p> Address: 1565 W Holt Ave #2, Pomona, CA 91768</p>" },
+          {lat: 33.988290, lng: -117.822570,info: "<h3>Diamond Happy Doggie Spa</h3><p> Address: 365 S Diamond Bar Blvd, Diamond Bar, CA 91765,</p><p> Phone: (909) 396-4500</p>" },
+          {lat: 34.106670, lng: -117.800670,info: "<h3>San Dimas</h3><p> Address: 143 E Bonita Ave, San Dimas, CA 91773</p><p> Phone: (909) 599-3383</p>" },
+          {lat: 34.088330, lng: -117.855490,info: "<h3>Covina Pet Spaw and Grooming Covina</h3><p> Address: 2900, 984 E Badillo St # A, Covina, CA 91724,</p><p>Phone: (626) 331-4348 </p>" },
+          {lat: 34.066940, lng: -117.751180,info: "<h3>Lorrie's Pet Grooming</h3><p> Address: 928 N Garey Ave, Pomona, CA 91767</p><p> Phone: (909) 865-8891</p>" },
+          {lat: 34.080740, lng: -117.756870,info: "<h3>Lili's Pet Grooming</h3><p> Address: 105 W Willow St, Pomona, CA 91768,</p><p>Phone: (909) 622-3272</p>" },
+          {lat: 34.113370, lng: -117.765070,info: "<h3>Pet Bath USA</h3><p> Address: 2117 Foothill Blvd h, La Verne, CA 91750,</p><p> Phone: (909) 593-8602</p>" },
+          {lat: 34.008630, lng: -117.689680,info: "<h3>Chino Mutt Cutts Dog Spa</h3><p> Address: 13460 Central Ave unit G, Chino, CA 91710</p><p> Phone: (909) 902-9898</p>" },
+          {lat: 34.031490, lng: -117.667670,info: "<h3>Pet Bath USA</h3><p> Address: 12345 Mountain Ave # S, Chino, CA 91710</p><p> Phone: (909) 627-6662</p>" }
         ];
         var labels = ["Chino Petco", "Westcovina Petco", "Clairmont Petco","La Verne PetCo",
-                      "Chino PetSmart","Chino Hill PetSmart","City of indutry PetSmart","West Covina\s' Eastland PetSmart","West Covina's Azusa PetSmart",
+                      "Chino PetSmart","Chino Hills PetSmart","City of indutry PetSmart","West Covina\s' Eastland PetSmart","West Covina's Azusa PetSmart",
                       "Pomona WalMart", "West covina WalMart","West covina WalMart","Chino WalMart",
                       "CHino All Pets Medical & Surgical Center Address",
                       "Pomona Lucky Pets Grooming Salon","diamond Happy Doggie Spa","San Dimas Pets Grooming Salon",
                       "Covina Pet Spaw and Grooming Covina","Lorrie's Pet Grooming","Lili's Pet Grooming",
                       "Pet Bath USA","Pet Bath USA","Pet Bath USA"
-                      ];
+                      ];    
                       
         function intmap(){
           var map = new google.maps.Map(document.getElementById('map'), {
@@ -443,123 +444,31 @@
             center: {lat:37.0902, lng: -95.7129}
           });
         }
+        
+        
+
         function chino() {
+          var infoWin = new google.maps.InfoWindow();
           var map = new google.maps.Map(document.getElementById('map'), {
             zoom: 13,
             center: {lat:34.0122, lng: -117.6889}
           });
           var markers = locations.map(function(location, i) {
-            return new google.maps.Marker({
+            var marker = new google.maps.Marker({
               position: location,
               label: labels[i % labels.length]
             });
+            google.maps.event.addListener(marker,'click',function(evt)
+            {
+              infoWin.setContent(location.info);
+              infoWin.open(map, marker);
+            })
+            return marker;
           });
-          var markerCluster = new MarkerClusterer(map, markers,{ imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
-          }
           
-        function chinohill(){
-          var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 13,
-            center: {lat:34.0551, lng: -117.7500}
-          });
-          var markers = locations.map(function(location, i) {
-            return new google.maps.Marker({
-              position: location,
-              label: labels[i % labels.length]
-            });
-          });
           var markerCluster = new MarkerClusterer(map, markers,{ imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
-          
-        }  
-        function pomona(){
-          var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 13,
-            center: {lat:34.0551, lng: -117.7500}
-          });
-          var markers = locations.map(function(location, i) {
-            return new google.maps.Marker({
-              position: location,
-              label: labels[i % labels.length]
-            });
-          });
-          var markerCluster = new MarkerClusterer(map, markers,{ imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
-          
         }
           
-        function westcovina(){
-          var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 13,
-            center: {lat:34.0686, lng: -117.9390}
-          });
-          var markers = locations.map(function(location, i) {
-            return new google.maps.Marker({
-              position: location,
-              label: labels[i % labels.length]
-            });
-          });
-          var markerCluster = new MarkerClusterer(map, markers,{ imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
-          
-        }  
-        
-        function covina(){
-          var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 13,
-            center: {lat:34.0900, lng: -117.8903}
-          });
-          var markers = locations.map(function(location, i) {
-            return new google.maps.Marker({
-              position: location,
-              label: labels[i % labels.length]
-            });
-          });
-          var markerCluster = new MarkerClusterer(map, markers,{ imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
-          
-        }
-        
-        function clairmont(){
-          var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 13,
-            center: {lat:34.0551, lng: -117.7500}
-          });
-          var markers = locations.map(function(location, i) {
-            return new google.maps.Marker({
-              position: location,
-              label: labels[i % labels.length]
-            });
-          });
-          var markerCluster = new MarkerClusterer(map, markers,{ imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
-          
-        }
-        
-        function montclair(){
-          var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 13,
-            center: {lat:34.0775, lng: -117.6898}
-          });
-          var markers = locations.map(function(location, i) {
-            return new google.maps.Marker({
-              position: location,
-              label: labels[i % labels.length]
-            });
-          });
-          var markerCluster = new MarkerClusterer(map, markers,{ imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
-          
-        }
-          
-        function diamondbar(){
-          var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 13,
-            center: {lat:34.0286, lng: -117.8103}
-          });
-          var markers = locations.map(function(location, i) {
-            return new google.maps.Marker({
-              position: location,
-              label: labels[i % labels.length]
-            });
-          });
-          var markerCluster = new MarkerClusterer(map, markers,{ imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
-          
-        }  
           
     </script>
     </body> 

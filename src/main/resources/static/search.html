@@ -9,9 +9,11 @@
 
 	<body ng-controller="SearchPageCtrl">
 		<section><h3 id="heading1">  Please click a breed name to display a picture and to select as option </h2></section>
-		<section><h5 id="heading2">Continually click the breed name to display a new picture.</h4></section>		
-        <!-- search bar -->
+		<section><h5 id="heading2">Continually click the breed name to display a new picture.</h4></section>
+			
+		<!-- search bar -->
 		
+<<<<<<< HEAD
           <section>
             <div class="split left">
               <ol>
@@ -29,3 +31,59 @@
             </section>
 	</body>
 </html>
+=======
+		<section>
+			<div class="split left">
+				<ol>
+					<input type="text" id="breedInput" onkeyup="searchDogsList()" placeholder="Enter or pick from breed list...">
+						<ul id="myUL">
+					  		<li ng-repeat="breed in breedList" ng-click="clickIn(breed.breedName)"><a href="#">{{breed.breedName}}</a></li>
+				  		</ul> 
+				</ol>
+			</div>
+			
+			<div class="split right">
+				<p>{{breed.breedName}}</p><br>
+			    <img id = "dogPicture" src = "{{breedNameAndURL.imageURL}}"></img>
+			</div>
+			<container id="buttonContainer" class="split right">
+				<div>
+					<!--<a href="/home.html#searchInfo" id = "dogName">-->
+					<button id= "findBreedInfo" onClick = "getInfoForDog(breed.breedName)">Get more information about breed</button>
+					<!--</a>-->
+				</div>
+			</container>
+			
+		
+		</section>
+	
+  
+	</body>
+	
+<script>
+
+function searchDogsList()
+ {
+    // Declare variables
+    var input, filter, ul, li, a, i;
+    input = document.getElementById('breedInput');
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName('li');
+
+    // Loop through all list items, and hide those who don't match the search query
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        if (a.innerHTML.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+function getInfoForDog(breedName)
+{
+	
+}
+</script>
+>>>>>>> d8873491c01f0b00e24058c53d57d015ede1b687
