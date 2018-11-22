@@ -1,5 +1,5 @@
 var pawmdApp = angular.module('pawmdApp', []);
-
+//var infoBreed = ""
 pawmdApp.controller('SearchPageCtrl', 
 
 	function ($scope, $http, $window, $rootScope) {
@@ -21,11 +21,12 @@ pawmdApp.controller('SearchPageCtrl',
 
 	$scope.getInfoForDog = function(breed_name) {
 
-		$scope.f1(breed_name);
-		//$rootScope.$emit("CallMy2ControllerMethod", {message: 'in search'});
-		// console.log("in search " + breed_name);
-		// $scope.$broadcast('parentmethod', { message: "gell" });
-		//$window.location = '../home.html#searchInfo';
+		$http.post("/saveBreed/" + breed_name)
+	  		.success(function(data){
+		  		console.log("success setting breed name");
+		  		$window.location = '../home.html#searchInfo';
+	  	});
+		
 	    
 	};
 
