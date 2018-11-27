@@ -15,6 +15,7 @@
         margin: 0;
         padding: 0;
       }
+     
       
      table.blueTable
       {
@@ -82,7 +83,6 @@
         font-size: 38px;
         font-weight: bold;
       }
-
     </style>
     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
     <script async defer
@@ -132,72 +132,75 @@
         <div class="col-md-8 col-md-offset-2 probootstrap-section-heading row text-center"> 
           <p id="searchInfo"></p>
           <h2 class="mb15 text-black probootstrap-heading" >Search Breed Info</h2>
-          </div>
-          <div class="col-md-8 col-md-offset-2 probootstrap-section-heading row text-center"> 
-              <form>
-                <input ng-model="breed_name" type="text" placeholder="Enter a Breed Name" required>
-                <button ng-click="getBreedInfo()">Get Breed Info</button>
-              </form>
+          <form>
+              <input ng-model="breed_name" type="text" placeholder="Enter a Breed Name" required>
+              <button ng-click="getBreedInfo()">Get Breed Info</button>
+            </form>
             <br><br><br>
-              <div>
-              <h2> {{breedInfo.breedName}}</h2>
-              
-              <table class="blueTable">
-                <thead>
-                  <tr>
-                    <th>Information Category </th>
-                    <th>Information Found </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td>Food Type</td>
-                    <td>{{breedInfo.foodType}}</td>
-                  </tr>
-                  <tr>
-                    <td>Feeding Frequency</td>
-                    <td>{{breedInfo.feeding}}</td>
-                  </tr>
-                  <tr>
-                    <td>Exercise Tips</td>
-                    <td>{{breedInfo.walkTime}}</td>
-                  </tr>
-                  <tr>
-                    <td> Health Concerns </td>
-                    <td>{{breedInfo.health}}</td>
-                  </tr>
-                  <tr>
-                    <td>Average Life-Span</td>
-                    <td>{{breedInfo.lifespan}}</td>
-                  </tr>
-                  <tr>
-                    <td>Average Female Weight</td>
-                    <td>{{breedInfo.femaleWeight}}</td>
-                  </tr>
-                  <tr>
-                    <td>Average Male Weight</td>
-                    <td>{{breedInfo.maleWeight}}</td>
-                  </tr>
-                </tbody>
-              </tr>
-            </table>
-              </div>
+              <div class="col-md-8 col-md-offset-1 probootstrap-section-heading"> 
+                <h2> {{breedInfo.breedName}}</h2>        
+                <table class="blueTable">
+                  <thead>
+                    <tr>
+                      <th>Information Category </th>
+                      <th>Information Found </th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>Food Type</td>
+                      <td>{{breedInfo.foodType}}</td>
+                    </tr>
+                    <tr>
+                      <td>Feeding Frequency</td>
+                      <td>{{breedInfo.feeding}}</td>
+                    </tr>
+                    <tr>
+                      <td>Exercise Tips</td>
+                      <td>{{breedInfo.walkTime}}</td>
+                    </tr>
+                    <tr>
+                      <td> Health Concerns </td>
+                      <td>{{breedInfo.health}}</td>
+                    </tr>
+                    <tr>
+                      <td>Average Life-Span</td>
+                      <td>{{breedInfo.lifespan}}</td>
+                    </tr>
+                    <tr>
+                      <td>Average Female Weight</td>
+                      <td>{{breedInfo.femaleWeight}}</td>
+                    </tr>
+                    <tr>
+                      <td>Average Male Weight</td>
+                      <td>{{breedInfo.maleWeight}}</td>
+                    </tr>
+                  </tbody>
+                </tr>
+              </table>
+            </div>
+        </div> 
+      </div>
+            <center>
               <a href="#top">Back to the top</a>
               <div id = "border">
                 <img src="images/border/border.png" width = "200px" height = "150px">
                 <img src="images/border/dog_face.jpg"width = "80px" height = "80px">
                 <img src="images/border/border.png"width = "200px" height = "150px">
               </div>
-          </div>
-      </div>
+            </center>
+          
+    
     </section> 
     
     <section class="probootstrap-section" data-section="NearestPetStores">
       <div class="container">
         <div class="row text-center mb30">
-          <div class="col-md-8 col-md-offset-1 probootstrap-section-heading"> 
+          <div class="col-md-8 col-md-offset-2 probootstrap-section-heading"> 
             <p id = "Maps"></p>
             <h2 class="mb30 text-black probootstrap-heading">Nearest Pet Stores</h2>
+          </div>
+          <div class="col-md-8 col-md-offset-1 probootstrap-section-heading"> 
             <button onclick="intmap()" style="float: right">Search</button>
             <div style="overflow: hidden;">
                 <form> Enter Location: <input style="width: 70%;" type ="text" id ="userLocation" name="place"></form>
@@ -209,7 +212,7 @@
             <p id="map" style="overflow: hidden; display:none"></p>
           </div>
         </div>
-        <center>
+        <center> 
           <a href="#top">Back to the top</a>
           <div id = "border">
             <img src="images/border/border.png" width = "200px" height = "150px">
@@ -218,7 +221,6 @@
            </div>
         </center>
     </section>
-   
    
     <section class="probootstrap-section" data-section="foodRecommendation">
       <div class="container" id = "foodRecommendation">
