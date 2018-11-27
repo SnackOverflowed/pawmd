@@ -51,7 +51,7 @@
         <div class="row intro-text">
           <div class="col-md-8 col-sm-offset-2 text-center">
             <h1 class="probootstrap-heading probootstrap-animate"></h1>
-            <p> say something here</p>
+            <p> {{Message}}</p>
             <a href="#searchInfo" class="btn btn-success" role="button">Search Breed Info</a>
             <button class="btn btn-success" ng-click="breedSearch()">List of Breed Name</button>
           </div>
@@ -90,8 +90,11 @@
           <div class="col-md-8 col-md-offset-2 probootstrap-section-heading"> 
             <p id = "Maps"></p>
             <h2 class="mb30 text-black probootstrap-heading">Nearest Pet Stores</h2>
-            <form> Enter Location: <input type ="text" id ="userLocation" name="place"></form>
-            <button onclick="inputLocation()">Search</button>
+            <button onclick="inputLocation()" style="float: right">Search</button>
+            <div style="overflow: hidden;">
+                <form> Enter Location: <input style="width: 70%;" type ="text" id ="userLocation" name="place"></form>
+            </div>
+            
             <p id="map"></p>
           </div>
         </div>
@@ -294,6 +297,7 @@
             <h2 class="mb30 text-black probootstrap-heading">Grooming Recommendations</h2>
           </div>
         </div>
+
         <div class="row">
           <center><h3 class="mb30 text-black probootstrap-heading">Shampoo</h3></center>
           <div class="col-md-4">
@@ -310,11 +314,11 @@
 
           <div class="col-md-4">
             <div class="probootstrap-pricing probootstrap-popular probootstrap-shadow">
-              <div class="mb20"><h2>Earthbath All Natural Pet Shampoo</h2></div>
+              <div class="mb20"><h2>Pro Pet Works Natural Oatmeal Dog Shampoo + Conditioner</h2></div>
               <div>
                 <ul class="probootstrap-list text-center mb20">
                   <li><p>Ideal for Hypoallergenic Coats</p></li>
-                  <li><img src="images/grooming/propet.jpeg" width ="200px" height ="200px"></li>
+                  <li><img src="images/grooming/propet.jpeg" width ="200px" height ="184px"></li>
                 </ul>
               </div>
             </div>
@@ -357,6 +361,30 @@
               </div>
             </div>
           </div>
+		  
+	  <div class="col-md-4">
+            <div class="probootstrap-pricing probootstrap-popular probootstrap-shadow">
+              <div class="mb20"><h2>Activet DUO Undercoater</h2></div>
+              <div>
+                <ul class="probootstrap-list text-center mb20">
+                  <li><p>Professional brush combination of the MatZapper and the CoatGrabber brushes</p></li>
+                  <li><img src="images/grooming/lg20168482429.jpg" width ="200px" height ="200px"></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+		  
+	  <div class="col-md-4">
+            <div class="probootstrap-pricing probootstrap-popular probootstrap-shadow">
+              <div class="mb20"><h2>Activet DUO SilCoater</h2></div>
+              <div>
+                <ul class="probootstrap-list text-center mb20">
+                  <li><p>Professional brush combination of the Pro Soft and the Super Soft CoatGrabber brushes</p></li>
+                  <li><img src="images/grooming/lg2016848146.jpg" width ="200px" height ="200px"></li>
+                </ul>
+              </div>
+            </div>
+          </div>
 
            <div class="col-md-4">
             <div class="probootstrap-pricing probootstrap-popular probootstrap-shadow">
@@ -369,8 +397,175 @@
               </div>
             </div>
           </div>
+        </div>
 
+
+          <div class="row">
+          <center><h3 class="mb30 text-black probootstrap-heading">Leashes</h3></center>
+          <div class="col-md-4">
+            <div class="probootstrap-pricing probootstrap-popular probootstrap-shadow">
+              <div class="mb20"><h2>PetSafe Nylon Dog Leash</h2></div>
+              <div>
+                <ul class="probootstrap-list text-center mb20">
+                  <li><p>Classic Leash</p></li>
+                  <li><img src="images/leash/leash.jpg" width ="200px" height ="200px"></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+<<<<<<< HEAD
     </section>
+=======
+
+          <div class="col-md-4">
+            <div class="probootstrap-pricing probootstrap-popular probootstrap-shadow">
+              <div class="mb20"><h2>Flexi New New Comfort Tape Leash</h2></div>
+              <div>
+                <ul class="probootstrap-list text-center mb20">
+                  <li><p>Retractable Leash</p></li>
+                  <li><img src="images/leash/retrack.jpg" width ="200px" height ="184px"></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="probootstrap-pricing probootstrap-popular probootstrap-shadow">
+              <div class="mb20"><h2>EzyDog ZERO SHOCK Leash</h2></div>
+              <div>
+                <ul class="probootstrap-list text-center mb20">
+                  <li><p> Shock Absorbing Leash</p></li>
+                  <li><img src="images/leash/sos.jpg" width ="200px" height ="198px"></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+	</div>
+	
+	<div class="row">
+          <center><h3 class="mb30 text-black probootstrap-heading">Other Grooming Tools</h3></center>
+          <div class="col-md-4">
+            <div class="probootstrap-pricing probootstrap-popular probootstrap-shadow">
+              <div class="mb20"><h2>Ergonomic Guillotine Style Nail Clipper</h2></div>
+              <div>
+                <ul class="probootstrap-list text-center mb20">
+                  <li><p>Nail Clipper</p></li>
+                  <li><img src="images/grooming/jsw_TL306.jpg" width ="200px" height ="215px"></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+		
+	  <div class="col-md-4">
+            <div class="probootstrap-pricing probootstrap-popular probootstrap-shadow">
+              <div class="mb20"><h2>SureGrip Nail Scissors</h2></div>
+              <div>
+                <ul class="probootstrap-list text-center mb20">
+                  <li><p>Nail Clipper for Smaller Breeds</p></li>
+                  <li><img src="images/grooming/400x400_TL3032.jpg" width ="200px" height ="215px"></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+		
+	  <div class="col-md-4">
+            <div class="probootstrap-pricing probootstrap-popular probootstrap-shadow">
+              <div class="mb20"><h2>Warren London Nail File</h2></div>
+              <div>
+                <ul class="probootstrap-list text-center mb20">
+                  <li><p>High-Quality Nail File</p></li>
+                  <li><img src="images/grooming/lg2016126143142" width ="200px" height ="215px"></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+		
+	  <div class="col-md-4">
+            <div class="probootstrap-pricing probootstrap-popular probootstrap-shadow">
+              <div class="mb20"><h2>Dremel 7.2 V MultiPro Cordless Grinding Kit</h2></div>
+              <div>
+                <ul class="probootstrap-list text-center mb20">
+                  <li><p>Cordless Nail Grinder</p></li>
+                  <li><img src="images/grooming/jsw_dr7700.jpg" width ="200px" height ="215px"></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+		
+	  <div class="col-md-4">
+            <div class="probootstrap-pricing probootstrap-popular probootstrap-shadow">
+              <div class="mb20"><h2>Aaronco Pro-File for Pets Diamond Coated Nail File 8</h2></div>
+              <div>
+                <ul class="probootstrap-list text-center mb20">
+                  <li><p>Stainless steel, durable nail file</p></li>
+                  <li><img src="images/grooming/jsw_aaronconailfile.jpg" width ="200px" height ="215px"></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+		
+	<div class="col-md-4">
+            <div class="probootstrap-pricing probootstrap-popular probootstrap-shadow">
+              <div class="mb20"><h2>Aaronco Sumo Raker</h2></div>
+              <div>
+                <ul class="probootstrap-list text-center mb20">
+                  <li><p>Pre-dulled raker used to take out large areas of topcoat and undercoat</p></li>
+                  <li><img src="images/grooming/lg2016122011316.jpg" width ="200px" height ="215px"></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+	      
+	<div class="col-md-4">
+            <div class="probootstrap-pricing probootstrap-popular probootstrap-shadow">
+              <div class="mb20"><h2>Aaronco Magna Carder</h2></div>
+              <div>
+                <ul class="probootstrap-list text-center mb20">
+                  <li><p>Sharp brush used for carding and stripping thickcoated breeds.</p></li>
+                  <li><img src="images/grooming/lg2016122011314.jpg" width ="200px" height ="215px"></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+	    
+	<div class="col-md-4">
+            <div class="probootstrap-pricing probootstrap-popular probootstrap-shadow">
+              <div class="mb20"><h2>Hair Puller Straight with Coated Handle</h2></div>
+              <div>
+                <ul class="probootstrap-list text-center mb20">
+                  <li><p>Small hemostats used to pull excess ear hair and prevent ear infections.</p></li>
+                  <li><img src="images/grooming/jsw_mf8410NEW.jpg" width ="200px" height ="215px"></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+	    
+	    <div class="col-md-4">
+            <div class="probootstrap-pricing probootstrap-popular probootstrap-shadow">
+              <div class="mb20"><h2>Hair Puller Curved with Coated Handle</h2></div>
+              <div>
+                <ul class="probootstrap-list text-center mb20">
+                  <li><p>Small hemostats used to pull excess ear hair and prevent ear infections.</p></li>
+                  <li><img src="images/grooming/jsw_pd8411NEW.jpg" width ="200px" height ="215px"></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+	
+		
+		
+		
+	
+		
+		
+		
+		
+	</div>        
+    </section>
+    
+>>>>>>> a04165fdea296be37cb31c0815b7d0cf6dfdb925
     <footer class="probootstrap-footer">
       <div class="container text-center">
         <div class="row">
