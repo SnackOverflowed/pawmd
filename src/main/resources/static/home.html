@@ -22,7 +22,7 @@
     </style>
     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
     <script async defer
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0EH8PZc2UblLuk9vKzJraXrtvkCOJglY&callback=initMap">
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0EH8PZc2UblLuk9vKzJraXrtvkCOJglY&callback=intmap">
     </script>
     <script src="./js/home-control.js"></script>
     <link rel ="stylesheet" href ="css/home-style.css"/>
@@ -102,12 +102,15 @@
           <div class="col-md-8 col-md-offset-2 probootstrap-section-heading"> 
             <p id = "Maps"></p>
             <h2 class="mb30 text-black probootstrap-heading">Nearest Pet Stores</h2>
-            <p id="map" style="overflow: hidden;"></p>
             <button onclick="intmap()" style="float: right">Search</button>
             <div style="overflow: hidden;">
                 <form> Enter Location: <input style="width: 70%;" type ="text" id ="userLocation" name="place"></form>
             </div>
             
+            <div id ="initialmap" > 
+              <iframe src="https://maps.google.com/maps?q=united%20state&t=&z=3&ie=UTF8&iwloc=&output=embed&zoom=9" width =120% height=100%  style = "display:block"></iframe>
+            </div>
+            <p id="map" style="overflow: hidden; display:none"></p>
           </div>
         </div>
         <center>
@@ -600,8 +603,12 @@
       
     <script>
       function intmap(){
+          var x = document.getElementById("initialmap"); //make the initial map dissapear
+          x.style.display = "none";
+          var x = document.getElementById("map"); //make the initial map dissapear
+          x.style.display = "block";
           var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 4,
+            zoom: 3,
             center: {lat:37.0902, lng: -95.7129}
           });
           var userLocation = document.getElementById("userLocation").value;
