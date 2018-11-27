@@ -731,7 +731,7 @@
           if(userLocation === ""){intmap();}
           if(userLocation==="chino"){chino();}
           if(userLocation==="91710"){chino();}
-          if(userLocation==="chino hill"){chinohill();}
+          if(userLocation==="chino hills"){chinohills();}
           if(userLocation==="91765"){chinohill();}
           if(userLocation==="pomona"){pomona();}
           if(userLocation==="91766"){pomona();}
@@ -810,105 +810,155 @@
           var markerCluster = new MarkerClusterer(map, markers,{ imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
         }
         
-        function chinohill(){
+        function chinohills(){
+	        var infoWin = new google.maps.InfoWindow();
           var map = new google.maps.Map(document.getElementById('map'), {
             zoom: 13,
             center: {lat:34.0551, lng: -117.7500}
           });
           var markers = locations.map(function(location, i) {
-            return new google.maps.Marker({
+            var marker = new google.maps.Marker({
               position: location,
               label: labels[i % labels.length]
             });
+            google.maps.event.addListener(marker,'click',function(evt)
+            {
+              infoWin.setContent(location.info);
+              infoWin.open(map, marker);
+            })
+            return marker;
           });
           var markerCluster = new MarkerClusterer(map, markers,{ imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
           
         }  
+        
         function pomona(){
+	        var infoWin = new google.maps.InfoWindow();
           var map = new google.maps.Map(document.getElementById('map'), {
             zoom: 13,
             center: {lat:34.0551, lng: -117.7500}
           });
           var markers = locations.map(function(location, i) {
-            return new google.maps.Marker({
+            var marker = new google.maps.Marker({
               position: location,
               label: labels[i % labels.length]
             });
+            google.maps.event.addListener(marker,'click',function(evt)
+            {
+              infoWin.setContent(location.info);
+              infoWin.open(map, marker);
+            })
+            return marker;
           });
           var markerCluster = new MarkerClusterer(map, markers,{ imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
           
         }
           
         function westcovina(){
+          var infoWin = new google.maps.InfoWindow();
           var map = new google.maps.Map(document.getElementById('map'), {
             zoom: 13,
             center: {lat:34.0686, lng: -117.9390}
           });
           var markers = locations.map(function(location, i) {
-            return new google.maps.Marker({
+          	var marker = new google.maps.Marker({	
               position: location,
               label: labels[i % labels.length]
             });
+            google.maps.event.addListener(marker,'click',function(evt)
+            {
+              infoWin.setContent(location.info);
+              infoWin.open(map, marker);
+            })
+            return marker;
           });
           var markerCluster = new MarkerClusterer(map, markers,{ imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
           
         }  
         
         function covina(){
+	        var infoWin = new google.maps.InfoWindow();
           var map = new google.maps.Map(document.getElementById('map'), {
             zoom: 13,
             center: {lat:34.0900, lng: -117.8903}
           });
           var markers = locations.map(function(location, i) {
-            return new google.maps.Marker({
+            var marker = new google.maps.Marker({
               position: location,
               label: labels[i % labels.length]
             });
+            google.maps.event.addListener(marker,'click',function(evt)
+            {
+              infoWin.setContent(location.info);
+              infoWin.open(map, marker);
+            })
+            return marker;
           });
           var markerCluster = new MarkerClusterer(map, markers,{ imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
           
         }
         
         function clairmont(){
+	        var infoWin = new google.maps.InfoWindow();
           var map = new google.maps.Map(document.getElementById('map'), {
             zoom: 13,
             center: {lat:34.0551, lng: -117.7500}
           });
           var markers = locations.map(function(location, i) {
-            return new google.maps.Marker({
+            var marker = new google.maps.Marker({
               position: location,
               label: labels[i % labels.length]
             });
+            google.maps.event.addListener(marker,'click',function(evt)
+            {
+              infoWin.setContent(location.info);
+              infoWin.open(map, marker);
+            })
+            return marker;
           });
           var markerCluster = new MarkerClusterer(map, markers,{ imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
           
         }
         
         function montclair(){
+	        var infoWin = new google.maps.InfoWindow();
           var map = new google.maps.Map(document.getElementById('map'), {
             zoom: 13,
             center: {lat:34.0775, lng: -117.6898}
           });
           var markers = locations.map(function(location, i) {
-            return new google.maps.Marker({
+            var marker = new google.maps.Marker({
               position: location,
               label: labels[i % labels.length]
             });
+            google.maps.event.addListener(marker,'click',function(evt)
+            {
+              infoWin.setContent(location.info);
+              infoWin.open(map, marker);
+            })
+            return marker;
           });
           var markerCluster = new MarkerClusterer(map, markers,{ imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
           
         }
           
         function diamondbar(){
-          var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 13,
-            center: {lat:34.0286, lng: -117.8103}
-          });
-          var markers = locations.map(function(location, i) {
-            return new google.maps.Marker({
-              position: location,
+	        var infoWin = new google.maps.InfoWindow();
+			var map = new google.maps.Map(document.getElementById('map'), {
+            	zoom: 13,
+				center: {lat:34.0286, lng: -117.8103}
+          	});
+		  	var markers = locations.map(function(location, i) {
+            	var marker = new google.maps.Marker({
+				position: location,
               label: labels[i % labels.length]
             });
+            google.maps.event.addListener(marker,'click',function(evt)
+            {
+              infoWin.setContent(location.info);
+              infoWin.open(map, marker);
+            })
+            return marker;
           });
           var markerCluster = new MarkerClusterer(map, markers,{ imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
         }  
