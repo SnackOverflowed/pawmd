@@ -7,8 +7,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
     <style>
       #map {
+        width: 120%;
         height: 100%;
-        width: 100%;
+        margin-right: 40px;
       }
       html, body {
         height: 100%;
@@ -330,9 +331,7 @@
               </div>
             </div>
           </div>
-
-
-
+          
           <div class="row">
           <center><h3 class="mb30 text-black probootstrap-heading">Brushes</h3></center>
           <div class="col-md-4">
@@ -372,10 +371,6 @@
           </div>
 
     </section>
-
-
-
-    
     <footer class="probootstrap-footer">
       <div class="container text-center">
         <div class="row">
@@ -387,18 +382,28 @@
     </footer>
       
     <script>
+      
         function inputLocation(){
           var userLocation = document.getElementById("userLocation").value;
           if(userLocation === ""){intmap();}
-          if (userLocation==="chino"){chino();}
+          if(userLocation==="chino"){chino();}
+          if(userLocation==="91710"){chino();}
           if(userLocation==="chino hill"){chinohill();}
+          if(userLocation==="91765"){chinohill();}
           if(userLocation==="pomona"){pomona();}
+          if(userLocation==="91766"){pomona();}
           if(userLocation==="west covina"){westcovina();}
-          if(userLocation==="covina"){westcovina();}
-          if(userLocation==="montclair"){westcovina();}
-          if(userLocation==="clairmont"){westcovina();}
-          if(userLocation==="diamond bar"){westcovina();}
+          if(userLocation==="91790"){westcovina();}
+          if(userLocation==="covina"){covina();}
+          if(userLocation==="91723"){covina();}
+          if(userLocation==="montclair"){montclair();}
+          if(userLocation==="91763"){montclair();}
+          if(userLocation==="clairmont"){clairmont();}
+          if(userLocation==="91711"){clairmont();}
+          if(userLocation==="diamond bar"){diamondbar();}
+          if(userLocation==="91765"){diamondbar();}
         }
+        
         var locations = [
           {lat: 34.000810, lng: -117.724040 ,info: "<h3>Chino PetCo</h3><p>Address:3820 Grand Ave, Chino, CA 91710</p><p> Phone: (909) 364-9807</p>" },
           {lat: 34.068740, lng: -117.935380,info: "<h3>Westcovina Petco Animal Supplies</h3><p>Address: 1050 W Covina Pkwy, West Covina, CA 91790</p><p> Phone: (626) 813-9040</p>"},
@@ -444,8 +449,6 @@
             center: {lat:37.0902, lng: -95.7129}
           });
         }
-        
-        
 
         function chino() {
           var infoWin = new google.maps.InfoWindow();
@@ -468,6 +471,109 @@
           
           var markerCluster = new MarkerClusterer(map, markers,{ imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
         }
+        
+        function chinohill(){
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 13,
+            center: {lat:34.0551, lng: -117.7500}
+          });
+          var markers = locations.map(function(location, i) {
+            return new google.maps.Marker({
+              position: location,
+              label: labels[i % labels.length]
+            });
+          });
+          var markerCluster = new MarkerClusterer(map, markers,{ imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+          
+        }  
+        function pomona(){
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 13,
+            center: {lat:34.0551, lng: -117.7500}
+          });
+          var markers = locations.map(function(location, i) {
+            return new google.maps.Marker({
+              position: location,
+              label: labels[i % labels.length]
+            });
+          });
+          var markerCluster = new MarkerClusterer(map, markers,{ imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+          
+        }
+          
+        function westcovina(){
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 13,
+            center: {lat:34.0686, lng: -117.9390}
+          });
+          var markers = locations.map(function(location, i) {
+            return new google.maps.Marker({
+              position: location,
+              label: labels[i % labels.length]
+            });
+          });
+          var markerCluster = new MarkerClusterer(map, markers,{ imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+          
+        }  
+        
+        function covina(){
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 13,
+            center: {lat:34.0900, lng: -117.8903}
+          });
+          var markers = locations.map(function(location, i) {
+            return new google.maps.Marker({
+              position: location,
+              label: labels[i % labels.length]
+            });
+          });
+          var markerCluster = new MarkerClusterer(map, markers,{ imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+          
+        }
+        
+        function clairmont(){
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 13,
+            center: {lat:34.0551, lng: -117.7500}
+          });
+          var markers = locations.map(function(location, i) {
+            return new google.maps.Marker({
+              position: location,
+              label: labels[i % labels.length]
+            });
+          });
+          var markerCluster = new MarkerClusterer(map, markers,{ imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+          
+        }
+        
+        function montclair(){
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 13,
+            center: {lat:34.0775, lng: -117.6898}
+          });
+          var markers = locations.map(function(location, i) {
+            return new google.maps.Marker({
+              position: location,
+              label: labels[i % labels.length]
+            });
+          });
+          var markerCluster = new MarkerClusterer(map, markers,{ imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+          
+        }
+          
+        function diamondbar(){
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 13,
+            center: {lat:34.0286, lng: -117.8103}
+          });
+          var markers = locations.map(function(location, i) {
+            return new google.maps.Marker({
+              position: location,
+              label: labels[i % labels.length]
+            });
+          });
+          var markerCluster = new MarkerClusterer(map, markers,{ imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'});
+        }  
           
           
     </script>

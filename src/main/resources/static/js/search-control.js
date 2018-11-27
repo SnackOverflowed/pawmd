@@ -17,7 +17,6 @@ pawmdApp.controller('SearchPageCtrl', function ($scope, $http, $window) {
 	  	});
 	};
 	
-	
 	$scope.loadBreedList();
 	
 });

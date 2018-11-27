@@ -1,4 +1,3 @@
-
 var pawmdApp = angular.module('pawmdApp', []);
 
 pawmdApp.controller('HomePageCtrl', function ($scope, $http, $window) {
@@ -11,7 +10,8 @@ pawmdApp.controller('HomePageCtrl', function ($scope, $http, $window) {
   }
 
   $scope.breedSearch = function() {
-	  	$window.location.href = '../search.html';
+	$window.location.href = './search.html';
   }
+  
 
 });
