@@ -9,12 +9,15 @@
       #map {
         width: 120%;
         height: 100%;
-        margin-right: 40px;
       }
       html, body {
         height: 100%;
         margin: 0;
         padding: 0;
+      }
+      #welcome{
+        font-size: 38px;
+        font-weight: bold;
       }
     </style>
     <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js"></script>
@@ -26,7 +29,7 @@
   </head>
   
   <body ng-controller="HomePageCtrl">
-      <nav class="navbar navbar-default probootstrap-navbar">
+    <nav class="navbar navbar-default probootstrap-navbar" id="top">
         <div class="container">
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false" aria-controls="navbar">
@@ -51,7 +54,8 @@
         <div class="row intro-text">
           <div class="col-md-8 col-sm-offset-2 text-center">
             <h1 class="probootstrap-heading probootstrap-animate"></h1>
-            <p> {{Message}}</p>
+            <br><br>
+            <h2 class="welcome">Welcome to PAW-MD</h2>
             <a href="#searchInfo" class="btn btn-success" role="button">Search Breed Info</a>
             <button class="btn btn-success" ng-click="breedSearch()">List of Breed Name</button>
           </div>
@@ -64,41 +68,58 @@
         <div class="col-md-8 col-md-offset-2 probootstrap-section-heading row text-center"> 
           <p id="searchInfo"></p>
           <h2 class="mb15 text-black probootstrap-heading" >Search Breed Info</h2>
-        </div>
-        <div class="col-md-8 col-md-offset-2 probootstrap-section-heading row text-center"> 
-            <form>
-	      <input ng-model="breed_name" type="text" placeholder="Enter a Breed Name" required>
-	      <button ng-click="getBreedInfo()">Get Breed Info</button>
-	    </form>
-            <div>
-              <p>{{breedInfo.breedName}}</p>
-              <p>{{breedInfo.foodType}}</p>
-              <p>{{breedInfo.walkTime}}</p>
-              <p>{{breedInfo.feeding}}</p>
-              <p>{{breedInfo.health}}</p>
-              <p>{{breedInfo.lifespan}}</p>
-              <p>{{breedInfo.groming}}</p>
-              <p>{{breedInfo.femaleWeight}}</p>
-              <p>{{breedInfo.maleWeight}}</p>
-            </div>
-        </div>
+          </div>
+          <div class="col-md-8 col-md-offset-2 probootstrap-section-heading row text-center"> 
+              <form>
+                <input ng-model="breed_name" type="text" placeholder="Enter a Breed Name" required>
+                <button ng-click="getBreedInfo()">Get Breed Info</button>
+              </form>
+            <br><br><br>
+              <div>
+                <p>{{breedInfo.breedName}}</p>
+                <p>{{breedInfo.foodType}}</p>
+                <p>{{breedInfo.walkTime}}</p>
+                <p>{{breedInfo.feeding}}</p>
+                <p>{{breedInfo.health}}</p>
+                <p>{{breedInfo.lifespan}}</p>
+                <p>{{breedInfo.groming}}</p>
+                <p>{{breedInfo.femaleWeight}}</p>
+                <p>{{breedInfo.maleWeight}}</p>
+              </div>
+              <a href="#top">Back to the top</a>
+              <div id = "border">
+                <img src="images/border/border.png" width = "200px" height = "150px">
+                <img src="images/border/dog_face.jpg"width = "80px" height = "80px">
+                <img src="images/border/border.png"width = "200px" height = "150px">
+              </div>
+          </div>
       </div>
     </section> 
+    
     <section class="probootstrap-section" data-section="NearestPetStores">
       <div class="container">
         <div class="row text-center mb30">
           <div class="col-md-8 col-md-offset-2 probootstrap-section-heading"> 
             <p id = "Maps"></p>
             <h2 class="mb30 text-black probootstrap-heading">Nearest Pet Stores</h2>
-            <button onclick="inputLocation()" style="float: right">Search</button>
+            <p id="map" style="overflow: hidden;"></p>
+            <button onclick="intmap()" style="float: right">Search</button>
             <div style="overflow: hidden;">
                 <form> Enter Location: <input style="width: 70%;" type ="text" id ="userLocation" name="place"></form>
             </div>
             
-            <p id="map"></p>
           </div>
         </div>
+        <center>
+          <a href="#top">Back to the top</a>
+          <div id = "border">
+            <img src="images/border/border.png" width = "200px" height = "150px">
+            <img src="images/border/dog_face.jpg"width = "80px" height = "80px">
+            <img src="images/border/border.png"width = "200px" height = "150px">
+           </div>
+        </center>
     </section>
+   
    
     <section class="probootstrap-section" data-section="foodRecommendation">
       <div class="container" id = "foodRecommendation">
@@ -287,9 +308,17 @@
               </div>
             </div>
           </div>
-      </div>
+        </div>
+        <center>
+          <a href="#top">Back to the top</a>
+          <div id = "border">
+            <img src="images/border/border.png" width = "200px" height = "150px">
+            <img src="images/border/dog_face.jpg"width = "80px" height = "80px">
+            <img src="images/border/border.png"width = "200px" height = "150px">
+          </div>
+        </center>
     </section>
-
+    
     <section class="probootstrap-section" data-section="groomRecomendation">
       <div class="container" id = "groomRecommendation">
         <div class="row text-center mb30">
@@ -398,8 +427,7 @@
             </div>
           </div>
         </div>
-
-
+          
           <div class="row">
           <center><h3 class="mb30 text-black probootstrap-heading">Leashes</h3></center>
           <div class="col-md-4">
@@ -408,16 +436,12 @@
               <div>
                 <ul class="probootstrap-list text-center mb20">
                   <li><p>Classic Leash</p></li>
-                  <li><img src="images/leash/leash.jpg" width ="200px" height ="200px"></li>
+                  <li><img src="images/leash/leash.jpg" width ="200px" height ="190px"></li>
                 </ul>
               </div>
             </div>
           </div>
-
-<<<<<<< HEAD
-    </section>
-=======
-
+          
           <div class="col-md-4">
             <div class="probootstrap-pricing probootstrap-popular probootstrap-shadow">
               <div class="mb20"><h2>Flexi New New Comfort Tape Leash</h2></div>
@@ -452,7 +476,7 @@
               <div>
                 <ul class="probootstrap-list text-center mb20">
                   <li><p>Nail Clipper</p></li>
-                  <li><img src="images/grooming/jsw_TL306.jpg" width ="200px" height ="215px"></li>
+                  <li><img src="images/grooming/jsw_TL306.jpg" width ="200px" height ="200px"></li>
                 </ul>
               </div>
             </div>
@@ -553,19 +577,17 @@
               </div>
             </div>
           </div>
-	
-		
-		
-		
-	
-		
-		
-		
-		
-	</div>        
+          </div>
+          <center>
+            <a href="#top">Back to the top</a>
+            <div id = "border">
+              <img src="images/border/border.png" width = "200px" height = "150px">
+              <img src="images/border/dog_face.jpg"width = "80px" height = "80px">
+              <img src="images/border/border.png"width = "200px" height = "150px">
+            </div>
+          </center>	   
     </section>
     
->>>>>>> a04165fdea296be37cb31c0815b7d0cf6dfdb925
     <footer class="probootstrap-footer">
       <div class="container text-center">
         <div class="row">
@@ -577,9 +599,18 @@
     </footer>
       
     <script>
-      
-        function inputLocation(){
+      function intmap(){
+          var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 4,
+            center: {lat:37.0902, lng: -95.7129}
+          });
           var userLocation = document.getElementById("userLocation").value;
+          if (userLocation!==""){
+            inputLocation(userLocation);
+          }
+        }
+        
+        function inputLocation(userLocation){
           if(userLocation === ""){intmap();}
           if(userLocation==="chino"){chino();}
           if(userLocation==="91710"){chino();}
@@ -638,12 +669,7 @@
                       "Pet Bath USA","Pet Bath USA","Pet Bath USA"
                       ];    
                       
-        function intmap(){
-          var map = new google.maps.Map(document.getElementById('map'), {
-            zoom: 4,
-            center: {lat:37.0902, lng: -95.7129}
-          });
-        }
+        
 
         function chino() {
           var infoWin = new google.maps.InfoWindow();
