@@ -18,67 +18,67 @@
      
       
      table.blueTable
-   	  {
-   	  	font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-   	  	border: 1px solid #A4A4A4;
-   	  	background-color: #FFFFFF;
-   	  	width:600px;
-   	  	height: 600px;
-   	  	text-align:left;
-   	  	border-collapse: collapse;
-   	  }
-   	  table.blueTable td, table.blueTable th
-   	  {
-   	  	border: 1px solid #125E16;
-   	  	padding: 3px 2px;
-   	  }
-   	  table.blueTable tbody td
-   	  {
-   	  	font-size: 13px;
-   	  	color:#060606;
-   	  	font-weight: bold;
-   	  }
-   	  table.blueTable tr:nth-child(even)
-   	  {
-   	  	background: #87D578;
-   	  }
-   	  table.blueTable thead
-   	  {
-   	  	background: #3EB730;
-   	  	background: -moz-linear-gradient(top, #6ec964 0%, #51be44 66%, #3EB730 100%);
-   	  	background: -webkit-linear-gradient(top, #6ec964 0%, #51be44 66%, #3EB730 100%);
-   	  	background: linear-gradient(to bottom, #6ec964 0%, #51be44 66%, #3EB730 100%);
- 		border-bottom: 2px solid #444444;
- 	  }
- 	  table.blueTable thead th 
- 	  {
- 	  	font-size: 15px;
- 	  	font-weight: bold;
-  		color: #FFFFFF;
-  		border-left: 2px solid #1B8B44;
-	  }	
-	  table.blueTable thead th:first-child 
-	  {
- 		 border-left: none;
-	  }
+      {
+        font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+        border: 1px solid #A4A4A4;
+        background-color: #FFFFFF;
+        width:600px;
+        height: 600px;
+        text-align:left;
+        border-collapse: collapse;
+      }
+      table.blueTable td, table.blueTable th
+      {
+        border: 1px solid #125E16;
+        padding: 3px 2px;
+      }
+      table.blueTable tbody td
+      {
+        font-size: 13px;
+        color:#060606;
+        font-weight: bold;
+      }
+      table.blueTable tr:nth-child(even)
+      {
+        background: #87D578;
+      }
+      table.blueTable thead
+      {
+        background: #3EB730;
+        background: -moz-linear-gradient(top, #6ec964 0%, #51be44 66%, #3EB730 100%);
+        background: -webkit-linear-gradient(top, #6ec964 0%, #51be44 66%, #3EB730 100%);
+        background: linear-gradient(to bottom, #6ec964 0%, #51be44 66%, #3EB730 100%);
+    border-bottom: 2px solid #444444;
+    }
+    table.blueTable thead th 
+    {
+      font-size: 15px;
+      font-weight: bold;
+      color: #FFFFFF;
+      border-left: 2px solid #1B8B44;
+    } 
+    table.blueTable thead th:first-child 
+    {
+     border-left: none;
+    }
 
-	  table.blueTable tfoot td 
-	  {
-  		font-size: 10px;
-	  }
-	  table.blueTable tfoot .links 
-	  {
-  		text-align: right;
-	  }
-	  table.blueTable tfoot .links a
-	  {
-  		display: inline-block;
-		background: #1C6EA4;
-		color: #FFFFFF;
-		padding: 2px 8px;
-		border-radius: 5px;
-	  }
-	    
+    table.blueTable tfoot td 
+    {
+      font-size: 10px;
+    }
+    table.blueTable tfoot .links 
+    {
+      text-align: right;
+    }
+    table.blueTable tfoot .links a
+    {
+      display: inline-block;
+    background: #1C6EA4;
+    color: #FFFFFF;
+    padding: 2px 8px;
+    border-radius: 5px;
+    }
+      
       #welcome{
         font-size: 38px;
         font-weight: bold;
@@ -141,46 +141,46 @@
             <br><br><br>
               <div>
               <h2> {{breedInfo.breedName}}</h2>
-            	
-            	<table class="blueTable">
-            		<thead>
-            			<tr>
-            				<th>Information Category </th>
-            				<th>Information Found </th>
-            			</tr>
-            		</thead>
-            		<tbody>
-            			<tr>
-            				<td>Food Type</td>
-            				<td>{{breedInfo.foodType}}</td>
-            			</tr>
-            			<tr>
-            				<td>Feeding Frequency</td>
-            				<td>{{breedInfo.feeding}}</td>
-            			</tr>
-            			<tr>
-            				<td>Exercise Tips</td>
-            				<td>{{breedInfo.walkTime}}</td>
-            			</tr>
-            			<tr>
-            				<td> Health Concerns </td>
-            				<td>{{breedInfo.health}}</td>
-            			</tr>
-            			<tr>
-            				<td>Average Life-Span</td>
-            				<td>{{breedInfo.lifespan}}</td>
-            			</tr>
-            			<tr>
-            				<td>Average Female Weight</td>
-            				<td>{{breedInfo.femaleWeight}}</td>
-            			</tr>
-            			<tr>
-            				<td>Average Male Weight</td>
-            				<td>{{breedInfo.maleWeight}}</td>
-            			</tr>
-            		</tbody>
-            	</tr>
-           	</table>
+              
+              <table class="blueTable">
+                <thead>
+                  <tr>
+                    <th>Information Category </th>
+                    <th>Information Found </th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Food Type</td>
+                    <td>{{breedInfo.foodType}}</td>
+                  </tr>
+                  <tr>
+                    <td>Feeding Frequency</td>
+                    <td>{{breedInfo.feeding}}</td>
+                  </tr>
+                  <tr>
+                    <td>Exercise Tips</td>
+                    <td>{{breedInfo.walkTime}}</td>
+                  </tr>
+                  <tr>
+                    <td> Health Concerns </td>
+                    <td>{{breedInfo.health}}</td>
+                  </tr>
+                  <tr>
+                    <td>Average Life-Span</td>
+                    <td>{{breedInfo.lifespan}}</td>
+                  </tr>
+                  <tr>
+                    <td>Average Female Weight</td>
+                    <td>{{breedInfo.femaleWeight}}</td>
+                  </tr>
+                  <tr>
+                    <td>Average Male Weight</td>
+                    <td>{{breedInfo.maleWeight}}</td>
+                  </tr>
+                </tbody>
+              </tr>
+            </table>
               </div>
               <a href="#top">Back to the top</a>
               <div id = "border">
@@ -195,7 +195,7 @@
     <section class="probootstrap-section" data-section="NearestPetStores">
       <div class="container">
         <div class="row text-center mb30">
-          <div class="col-md-8 col-md-offset-1 probootstrap-section-heading"> 
+          <div class="col-md-8 col-md-offset-2 probootstrap-section-heading"> 
             <p id = "Maps"></p>
             <h2 class="mb30 text-black probootstrap-heading">Nearest Pet Stores</h2>
             <button onclick="intmap()" style="float: right">Search</button>
@@ -489,26 +489,26 @@
               </div>
             </div>
           </div>
-		  
-	  <div class="col-md-4">
+      
+    <div class="col-md-4">
             <div class="probootstrap-pricing probootstrap-popular probootstrap-shadow">
               <div class="mb20"><h2>Activet DUO Undercoater</h2></div>
               <div>
                 <ul class="probootstrap-list text-center mb20">
-                  <li><p>Professional brush combination of the MatZapper and the CoatGrabber brushes</p></li>
-                  <li><img src="images/grooming/lg20168482429.jpeg" width ="200px" height ="200px"></li>
+                  <li><p>Combination MatZapper/CoatGrabber Brush</p></li>
+                  <li><img src="images/grooming/lg20168482429.jpeg" width ="200px" height ="188px"></li>
                 </ul>
               </div>
             </div>
           </div>
-		  
-	  <div class="col-md-4">
+      
+    <div class="col-md-4">
             <div class="probootstrap-pricing probootstrap-popular probootstrap-shadow">
               <div class="mb20"><h2>Activet DUO SilCoater</h2></div>
               <div>
                 <ul class="probootstrap-list text-center mb20">
-                  <li><p>Professional brush combination of the Pro Soft and the Super Soft CoatGrabber brushes</p></li>
-                  <li><img src="images/grooming/lg2016848146.jpeg" width ="200px" height ="200px"></li>
+                  <li><p>Combination Pro Soft/Super Soft CoatGrabber Brush</p></li>
+                  <li><img src="images/grooming/lg2016848146.jpeg" width ="200px" height ="187px"></li>
                 </ul>
               </div>
             </div>
@@ -547,7 +547,7 @@
               <div>
                 <ul class="probootstrap-list text-center mb20">
                   <li><p>Classic Leash</p></li>
-                  <li><img src="images/leash/leash.jpg" width ="200px" height ="190px"></li>
+                  <li><img src="images/leash/leash.jpg" width ="200px" height ="200px"></li>
                 </ul>
               </div>
             </div>
@@ -577,9 +577,9 @@
             </div>
           </div>
 
-	</div>
-	
-	<div class="row">
+  </div>
+  
+  <div class="row">
           <center><h3 class="mb30 text-black probootstrap-heading">Other Grooming Tools</h3></center>
           <div class="col-md-4">
             <div class="probootstrap-pricing probootstrap-popular probootstrap-shadow">
@@ -592,8 +592,8 @@
               </div>
             </div>
           </div>
-		
-	  <div class="col-md-4">
+    
+    <div class="col-md-4">
             <div class="probootstrap-pricing probootstrap-popular probootstrap-shadow">
               <div class="mb20"><h2>SureGrip Nail Scissors</h2></div>
               <div>
@@ -604,8 +604,8 @@
               </div>
             </div>
           </div>
-		
-	  <div class="col-md-4">
+    
+    <div class="col-md-4">
             <div class="probootstrap-pricing probootstrap-popular probootstrap-shadow">
               <div class="mb20"><h2>Warren London Nail File</h2></div>
               <div>
@@ -616,8 +616,8 @@
               </div>
             </div>
           </div>
-		
-	  <div class="col-md-4">
+    
+    <div class="col-md-4">
             <div class="probootstrap-pricing probootstrap-popular probootstrap-shadow">
               <div class="mb20"><h2>Dremel 7.2 V MultiPro Cordless Grinding Kit</h2></div>
               <div>
@@ -628,62 +628,62 @@
               </div>
             </div>
           </div>
-		
-	  <div class="col-md-4">
+    
+    <div class="col-md-4">
             <div class="probootstrap-pricing probootstrap-popular probootstrap-shadow">
               <div class="mb20"><h2>Aaronco Pro-File for Pets Diamond Coated Nail File 8</h2></div>
               <div>
                 <ul class="probootstrap-list text-center mb20">
-                  <li><p>Stainless steel, durable nail file</p></li>
+                  <li><p>Stainless Steel Nail File</p></li>
                   <li><img src="images/grooming/jsw_aaronconailfile.jpg" width ="200px" height ="215px"></li>
                 </ul>
               </div>
             </div>
           </div>
-		
-	<div class="col-md-4">
+    
+  <div class="col-md-4">
             <div class="probootstrap-pricing probootstrap-popular probootstrap-shadow">
               <div class="mb20"><h2>Aaronco Sumo Raker</h2></div>
               <div>
                 <ul class="probootstrap-list text-center mb20">
-                  <li><p>Pre-dulled raker used to take out large areas of topcoat and undercoat</p></li>
-                  <li><img src="images/grooming/lg2016122011316.jpeg" width ="200px" height ="215px"></li>
+                  <li><p>Pre-dulled Raker</p></li>
+                  <li><img src="images/grooming/lg2016122011316.jpeg" width ="200px" height ="230px"></li>
                 </ul>
               </div>
             </div>
           </div>
-	      
-	<div class="col-md-4">
+        
+  <div class="col-md-4">
             <div class="probootstrap-pricing probootstrap-popular probootstrap-shadow">
               <div class="mb20"><h2>Aaronco Magna Carder</h2></div>
               <div>
                 <ul class="probootstrap-list text-center mb20">
-                  <li><p>Sharp brush used for carding and stripping thickcoated breeds.</p></li>
+                  <li><p>Thickcoat Brush</p></li>
                   <li><img src="images/grooming/lg2016122011314.jpeg" width ="200px" height ="215px"></li>
                 </ul>
               </div>
             </div>
           </div>
-	    
-	<div class="col-md-4">
+      
+  <div class="col-md-4">
             <div class="probootstrap-pricing probootstrap-popular probootstrap-shadow">
               <div class="mb20"><h2>Hair Puller Straight with Coated Handle</h2></div>
               <div>
                 <ul class="probootstrap-list text-center mb20">
-                  <li><p>Small hemostats used to pull excess ear hair and prevent ear infections.</p></li>
-                  <li><img src="images/grooming/jsw_mf8410NEW.jpg" width ="200px" height ="215px"></li>
+                  <li><p>Small Hemostat</p></li>
+                  <li><img src="images/grooming/jsw_mf8410NEW.jpg" width ="200px" height ="200px"></li>
                 </ul>
               </div>
             </div>
           </div>
-	    
-	    <div class="col-md-4">
+      
+      <div class="col-md-4">
             <div class="probootstrap-pricing probootstrap-popular probootstrap-shadow">
               <div class="mb20"><h2>Hair Puller Curved with Coated Handle</h2></div>
               <div>
                 <ul class="probootstrap-list text-center mb20">
-                  <li><p>Small hemostats used to pull excess ear hair and prevent ear infections.</p></li>
-                  <li><img src="images/grooming/jsw_pd8411NEW.jpg" width ="200px" height ="215px"></li>
+                  <li><p>Small Hemostat</p></li>
+                  <li><img src="images/grooming/jsw_pd8411NEW.jpg" width ="200px" height ="200px"></li>
                 </ul>
               </div>
             </div>
@@ -696,7 +696,7 @@
               <img src="images/border/dog_face.jpg"width = "80px" height = "80px">
               <img src="images/border/border.png"width = "200px" height = "150px">
             </div>
-          </center>	   
+          </center>    
     </section>
     
     <footer class="probootstrap-footer">
